@@ -1,0 +1,74 @@
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.chartControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chartTypeSelector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chartTypeButton {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.chartTypeButton:hover {
+  background-color: var(--border-color);
+}
+
+.chartTypeButton.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.chartWrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+/* Override Recharts default styles to match our theme */
+.localWrapper :global(.recharts-tooltip-cursor) {
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.localWrapper :global(.recharts-cartesian-axis-tick-value),
+.localWrapper :global(.recharts-legend-item-text) {
+  fill: var(--text-secondary);
+}
+
+.localWrapper :global(.dark).chartContainer :global(.recharts-cartesian-grid-horizontal),
+.localWrapper :global(.dark).chartContainer :global(.recharts-cartesian-grid-vertical) {
+  stroke: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .chartWrapper {
+    height: 300px;
+  }
+}
+

@@ -1,0 +1,64 @@
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  min-height: 200px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  resize: vertical; /* Allows vertical resizing */
+  overflow: auto; /* Enables scrolling if content overflows */
+
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editorHeader h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.executeButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.executeButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.editor {
+  flex: 1;
+  overflow: auto;
+}
+
+.editor :global(.cm-editor) {
+  height: 100%;
+}
+
+.editorFooter {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  resize: vertical; /* Allows vertical resizing */
+  overflow: auto; /* Enables scrolling if content overflows */
+
+}
+
+@media (max-width: 768px) {
+  .editorContainer {
+    height: 30%;
+  }
+}
+
