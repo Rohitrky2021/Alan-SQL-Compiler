@@ -14,6 +14,10 @@ A modern, interactive web application for running SQL queries and visualizing re
 
 Here's a visual journey through the platform's key interfaces:
 
+### Architechture
+![Login Interface](media/s7.png)
+
+
 ### Login Page
 ![Login Interface](media/s1.png)
 ![Login Interface](media/s2.png)
