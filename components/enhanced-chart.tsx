@@ -18,9 +18,6 @@ import {
 
 type ChartType = "bar" | "pie"
 
-interface EnhancedChartProps {
-  data: any[]
-}
 
 export default function EnhancedChart({ data }: EnhancedChartProps) {
   const [chartType, setChartType] = useState<ChartType>("bar")

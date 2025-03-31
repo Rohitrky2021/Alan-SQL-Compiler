@@ -6,9 +6,7 @@ import { formatDate } from "@/lib/utils"
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
-interface QueryInfoProps {
-  isCollapsed?: boolean
-}
+
 
 export default function QueryInfo({ isCollapsed }: QueryInfoProps) {
   const { currentQuery } = useQuery()

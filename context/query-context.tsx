@@ -5,36 +5,7 @@ import { sampleQueries } from "@/lib/sample-queries"
 import { executeQueryMock } from "@/lib/mock-data"
 import { generateId } from "@/lib/utils"
 
-interface Query {
-  id: string
-  name: string
-  category: string
-  description: string
-  sql: string
-  created: string
-  lastRun: string
-  results: any[] | null
-}
 
-interface HistoryItem {
-  id: string
-  name: string
-  sql: string
-  timestamp: string
-}
-
-interface QueryContextType {
-  queries: Query[]
-  currentQuery: Query
-  queryHistory: HistoryItem[]
-  isLoading: boolean
-  error: string | null
-  selectQuery: (id: string) => void
-  setCurrentQuery: (query: Query) => void
-  executeQuery: () => void
-  clearHistory: () => void
-  rerunHistoryQuery: (id: string) => void
-}
 
 const QueryContext = createContext<QueryContextType | undefined>(undefined)
 

@@ -1,15 +1,5 @@
 import { generateId } from "./utils"
 
-export interface Query {
-  id: string
-  name: string
-  category: string
-  description: string
-  sql: string
-  created: string
-  lastRun: string
-  results: any[] | null
-}
 
 export const sampleQueries: Query[] = [
   {
@@ -27,7 +17,7 @@ export const sampleQueries: Query[] = [
     name: "Customer Orders Summary",
     category: "Reporting",
     description: "Shows total orders and revenue by customer",
-    sql: `SELECT 
+    sql: `SELECT s
   c.customer_id,
   c.first_name,
   c.last_name,
