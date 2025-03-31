@@ -28,12 +28,12 @@ export default function Header({ loadTime }: HeaderProps) {
               <ThemeToggle />
             </li>
             <li>
-              <a href="https://github.com/yourusername/sql-query-runner" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Rohitrky2021/Alan-SQL-Compiler" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </li>
             <li>
-              <a href="#" onClick={(e) => e.preventDefault()}>
+              <a href="https://github.com/Rohitrky2021/Alan-SQL-Compiler?tab=readme-ov-file#sql-query-runner" onClick={(e) => e.preventDefault()}>
                 Documentation
               </a>
             </li>
